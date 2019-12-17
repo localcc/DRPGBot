@@ -22,7 +22,7 @@ module.exports = class DbClass {
 
 
     connect({password}) {
-        mongoose.connect(`url@user:${password}`,
+        mongoose.connect(`mongodb+srv://mainUser:${password}@clusterr-ikbjl.gcp.mongodb.net/test?retryWrites=true&w=majority`,
             mongo_params).then(success => {
                 this.connection = mongoose.connection;
                 return success;
