@@ -1,8 +1,13 @@
 const discord = require("discord.js");
 const owner_id = "194351651149185031";
 const test_channel_id = "646079213941817365";
-const helpModule = require('./Modules/HelpModule/HelpModule.js');
+const commandsList = require("./CommandsList/CommandsList.js");
 const bot_prefix = '.';
+
+
+
+
+
 module.exports = class MainModule {
     discord_client = null;
     static INSTANCE;
@@ -16,7 +21,9 @@ module.exports = class MainModule {
 
     message(msg) {
         if(msg.content.startsWith(bot_prefix)) {
-            msg.content.substr(1).startsWith()
+            if(msg.content.substr(1).startsWith(commands.help.alias)) {
+                commands.help.executable(msg);
+            }
         }
     }
 
