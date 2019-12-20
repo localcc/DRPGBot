@@ -1,5 +1,7 @@
 module.exports = class BaseModule {
-    static exec(...args);
+    static exec(...args)  {
+
+    }
     static alias;
     static syntax;
     static description;

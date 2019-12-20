@@ -12,4 +12,7 @@ const player_schema = new mongoose.Schema({
     player_player_wins: Number,
     player_lvl: Number,
     player_statistic: String,
+    player_permission_lvl: Number,
 });
+
+module.exports = mongoose.model('player', player_schema);
